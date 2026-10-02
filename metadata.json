@@ -1,0 +1,6 @@
+{
+  "name": "AegisDrone AI - Threat Simulation & Trainer",
+  "description": "AI-Enabled Drone & Counter-Drone Threat Simulation Trainer for security and defence operator decision training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #070a0f;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-tactical {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.025em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Tactical HUD and Radar grid patterns */
+.radar-grid-bg {
+  background-image: 
+    radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0, rgba(6, 182, 212, 0.01) 70%, transparent 100%),
+    linear-gradient(rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+.radar-sweep-effect {
+  background: conic-gradient(from 0deg, rgba(6, 182, 212, 0.28) 0deg, rgba(6, 182, 212, 0.03) 45deg, transparent 60deg);
+}
+
+@keyframes sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: sweep 4s linear infinite;
+}
+
+/* Subtle crosshair cursor for simulation */
+.cursor-tactical {
+  cursor: crosshair;
+}
+
+/* Custom scrollbars for dense tactical panels */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0b111c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
